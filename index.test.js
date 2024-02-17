@@ -29,3 +29,8 @@ it('Maintains the same number of decimal points', () => {
   const result = nextVersion('9.9');
   expect(result).toBe('10.0');
 });
+
+it('Maintains the same number of zeros at the beginning of the version', () => {
+  const result = nextVersion('0.0.9.0.9');
+  expect(result).toBe('0.0.9.1.0');
+});
