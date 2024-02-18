@@ -5,19 +5,18 @@
  * @returns {string} - The incremented new version string
  */
 const nextVersion = (currentVersion) => {
-  const removeDots = currentVersion.replace(/\./g, '');
-  const dotCount = currentVersion.length - removeDots.length;
-  const incrementVersionNumber = String(Number(removeDots) + 1);
+  const versionArray = currentVersion.split('.').map(Number);
 
-  let newVersion = '';
-  for (let i = incrementVersionNumber.length - 1, dotAdded = 0; i >= 0; i--) {
-    newVersion = incrementVersionNumber[i] + newVersion;
-    if (dotAdded < dotCount && i > 0) {
-      newVersion = '.' + newVersion;
-      dotAdded++;
+  versionArray[versionArray.length - 1] += 1;
+
+  for (let i = versionArray.length - 1; i > 0; i--) {
+    if (versionArray[i] === 10) {
+      versionArray[i] = 0;
+      versionArray[i - 1] += 1;
     }
   }
-  return newVersion;
+
+  return versionArray.join('.');
 };
 
 module.exports = nextVersion;
