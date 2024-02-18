@@ -4,6 +4,7 @@
   "description": "A script for managing version numbers",
   "main": "index.js",
   "scripts": {
+    "get-next-version": "node generateNextVersionNumber",
     "test": "jest"
   },
   "keywords": [],
