@@ -1,13 +1,15 @@
 # Version-Bot 🤖
 
-Version-Bot is a an automated script which will provide the next software version number, eliminating the need to determine this manually.  
-When the program is run, it will ask for the current software version number. Then, it will provide the next software version number to use!
+Version-Bot is an automated script which will provide the next software version number, eliminating the need to determine this manually.
+
+When the program is run, it will ask for the current software version number, and provide you with the next software version number to use.
 
 ## Dependencies
 
 * [Node](https://nodejs.org) v20.10.0 or above
 
 ### Dev Dependencies
+
 * [Jest](https://jestjs.io/)
 
 ## Installation
@@ -20,7 +22,7 @@ When the program is run, it will ask for the current software version number. Th
 
 ## How to Use
 
-* To run the version update script, nagivate to the project folder in your terminal and run `npm run get-next-version`
+* To run the version update script, navigate to the project folder in your terminal and run `npm run get-next-version`
   * Follow the prompt asking for your current software version, and press `Enter`
   * The next software version to use will be calculated and provided to you
 
@@ -30,6 +32,7 @@ When the program is run, it will ask for the current software version number. Th
   * Test results will be displayed in the terminal
 
 ## Further Improvements
+
 * Ways to expand the project functionality include:
   * Validating user input to ensure string entered can be successfully changed to a number type
   * Widening version update functionality to account for multiple zeros in semantic versioning sections (e.g.: `3.000.001`)
